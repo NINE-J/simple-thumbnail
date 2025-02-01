@@ -1,0 +1,10 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "start": "concurrently --names \"backend,frontend\" --prefix-colors \"bgBlue.bold,bgGreen.bold\" \"npm run start --prefix backend | tee backend.log\" \"npm run start --prefix frontend | tee frontend.log\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  }
+}
