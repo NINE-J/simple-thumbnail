@@ -11,6 +11,10 @@ export const FONT_LIST = [
     name: '산돌 삼립호빵체 Basic',
     value: 'samlip',
   },
+  {
+    name: '프리텐다드',
+    value: 'pretendard',
+  },
 ];
 
-export const FONT_LIST_TO_TAILWIND = ['font-suit', 'font-agro', 'font-samlip'];
+export const FONT_LIST_TO_TAILWIND = ['font-suit', 'font-agro', 'font-samlip', 'font-pretendard'];

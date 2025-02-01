@@ -71,6 +71,7 @@ module.exports = {
         suit: 'suit',
         agro: 'agro',
         samlip: 'samlip',
+        pretendard: 'pretendard',
       },
       animation: {
         spinner: 'spin 1000ms infinite linear reverse',
