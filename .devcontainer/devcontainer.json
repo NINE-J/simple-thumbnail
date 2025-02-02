@@ -1,0 +1,31 @@
+{
+  "name": "simple-thumbnail",
+  "build": {
+    "dockerfile": "Dockerfile",
+    // Dockerfile에서 명령 사용 시 기준이 되는 디렉토리
+    "context": ".."
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.rulers": [
+          {
+            "column": 80,
+            "color": "#ffffff80"
+          },
+          {
+            "column": 100,
+            "color": "#ffffff40"
+          }
+        ]
+      },
+      "extensions": ["esbenp.prettier-vscode", "dbaeumer.vscode-eslint"]
+    }
+  },
+  // 컨테이너의 변경 사항이 로컬 소스에 영향이 없도록 볼륨 사용
+  "workspaceFolder": "/workspaces",
+  "workspaceMount": "source=${localWorkspaceFolderBasename},target=/workspaces,type=volume,consistency=cached",
+  "postCreateCommand": "cd ${localWorkspaceFolderBasename} && npm install && npm --prefix frontend install && npm --prefix backend install"
+}
