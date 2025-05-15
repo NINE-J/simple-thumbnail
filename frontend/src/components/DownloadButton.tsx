@@ -15,7 +15,7 @@ function DownloadButton({ previewRef }: Props) {
   const handleClick = useCallback(async () => {
     if (previewRef.current) {
       setIsLoad(true);
-      const scaleFactor = 1.2;
+      const scaleFactor = 2;
       const canvasWidth = previewRef.current.offsetWidth * scaleFactor;
       const canvasHeight = previewRef.current.offsetHeight * scaleFactor;
       const options = {
